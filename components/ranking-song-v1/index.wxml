@@ -1,0 +1,11 @@
+<!--components/ranking-song-v1/index.wxml-->
+
+<view class="ranking-list">
+  <area-header leftText="巅峰榜" showArrow="{{false}}"></area-header>
+  <block wx:for="{{rankingList}}" wx:key="name">
+    <ranking-song-v2 item="{{item}}"  
+                                  bindtap="clickRanking"
+                                  data-idx = "{{index}}">
+    </ranking-song-v2>
+  </block>
+</view>

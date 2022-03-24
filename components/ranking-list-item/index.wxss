@@ -1,0 +1,48 @@
+/* components/ranking-list-item/index.wxss */
+.song-item{
+  display: flex;
+  align-items: center;
+  margin: 36rpx 0 10rpx;
+}
+.index{
+  width: 40rpx;
+  font-size: 30rpx;
+  padding: 12rpx ;
+  font-weight: 600;
+  text-align: center;
+}
+.info{
+  /* display: flex; */
+  margin-left: 16rpx;
+
+   /* 显示一行*/
+   white-space:nowrap;
+   text-overflow: ellipsis;
+   overflow: hidden;
+   text-emphasis: none;
+  
+}
+.name{
+  font-size: 30rpx;
+  font-weight: 600;
+
+  
+
+}
+.source{
+  display: flex;
+  align-items: center;
+  color: #666;
+  font-size: 24rpx;
+  margin-top: 10rpx;
+}
+.icon{
+  width: 38rpx;
+  height: 22rpx;
+  margin-right: 12rpx;
+}
+.space{
+  margin-left: 10rpx;
+
+ 
+}

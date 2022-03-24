@@ -1,0 +1,34 @@
+/* pages/video-detail/index.wxss */
+page{
+  padding-top: 225px;
+}
+.video{
+  width: 100%;
+  height: 225px;
+  position: fixed;
+  top: 0;
+  z-index: 9;
+}
+.video-info{
+  padding: 10px  8px 0 8px ;
+}
+.mv-info{
+  font-size: 14px;
+  color: rgb(141, 138, 138);
+}
+.mv-info .title{
+  font-size: 18px;
+  color: black;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+.mv-data{
+  margin-top:5px ;
+}
+.relatedItem{
+  margin: 10px 0;
+}
+.text{
+  font-weight: 800;
+  margin: 10px 0 ;
+}

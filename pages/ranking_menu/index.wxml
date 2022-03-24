@@ -1,0 +1,18 @@
+<!--pages/ranking_menu/index.wxml-->
+<block wx:if="{{type === 'rank'}}">
+  <area-header leftText="{{rankingData.name}}" showArrow="{{false}}"></area-header>
+</block>
+ <block wx:elif="{{type === 'menu'}}"> 
+  <cover-img rankingData="{{rankingData}}"></cover-img>
+ </block>
+
+  <view class="rankingList">
+  <block wx:for="{{rankingData.tracks}}" wx:key="id" >
+    <ranking-list-item songinfo="{{item}}" 
+                                  index="{{index+1}}"
+                                  bindtap="playList"
+                                  data-index = "{{index}}">
+    </ranking-list-item>
+  </block>
+  </view>
+

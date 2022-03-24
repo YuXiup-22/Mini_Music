@@ -1,0 +1,70 @@
+/* pages/home_music/index.wxss */
+page{
+  padding: 0 20rpx 44px 22rpx;
+}
+.van-search__content{
+  background-color: #fff  !important;
+}
+.van-search{
+  padding: 10px 0 !important;
+}
+.img{
+  width: 100%;
+}
+.swiper{
+  border-radius: 10rpx;
+  overflow: hidden;
+}
+/* 播放工具栏 */
+.play-bar{
+  position: fixed;
+  left: 0;
+  right:0;
+  bottom: 0;
+  height: 44px;
+  /*           x轴、y轴偏移  模糊度  颜色 */
+  box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1);
+  background: #fafafa;
+  padding: 0 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.play-bar .left,.play-bar .right{
+  display: flex;
+  align-items: center;
+}
+.play-bar .left .album{
+  height: 44px;
+  width: 44px;
+  border-radius: 50%;
+  position: relative;
+  top: -8px;
+}
+.play-bar .left .name{
+  font-size: 14px;
+  margin-left: 18rpx;
+}
+.play-bar .right .icon{
+  width: 30px;
+  height: 30px;
+}
+.play-bar .right .play{
+  width:25px ;
+  height: 25px;
+  margin-right: 10rpx;
+}
+
+/* album-anim动画 */
+@keyframes albumanim{
+  from{
+    transform: rotate(0deg)
+  }
+  to{
+    transform: rotate(360deg)
+  }
+}
+.album-anim{
+  /* 动画 时间  线性使得顺滑 无穷 */
+  animation: albumanim 16s linear infinite ;
+}

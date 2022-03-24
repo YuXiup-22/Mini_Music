@@ -1,0 +1,18 @@
+/* components/scroll-view-song-v1/index.wxss */
+.hotSongList{
+  width: 100vw;
+  position: relative;
+  left: -20rpx;
+  white-space: nowrap;
+}
+.song-item{
+  display: inline-block;
+  /* background-color:red; */
+  width: 220rpx;
+  
+  margin-left: 20rpx;
+  vertical-align: top;
+}
+.song-item:last-child{
+  margin-right: 20rpx;
+}

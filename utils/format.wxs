@@ -1,0 +1,27 @@
+function formatCounte(counte){
+  // 先将其转换为数字，为了避免传入的是字符串
+  var counter = parseInt(counte) ;
+  if(counter > 100000000){
+    return (counter/100000000).toFixed(1) + "亿"
+  }else if (counter>10000){
+    return (counter/10000).toFixed(1)+"万"
+  }else{
+    return counter +''
+  }
+}
+
+function padLeftZero(time){
+  time = time +""
+  return ("00" + time ).slice(time.length)
+}
+function formatDuration(duration){
+  var time = duration / 1000
+  var minite = Math.floor(time / 60) 
+  var second = Math.floor (time % 60 )
+  return padLeftZero(minite) + ":" +padLeftZero(second)
+}
+module.exports={
+  formatCounte:formatCounte,
+  formatDuration:formatDuration
+
+}

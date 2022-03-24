@@ -1,0 +1,11 @@
+<!--components/scroll-view-song-v2/index.wxml-->
+<wxs src="../../utils/format.wxs" module="format"></wxs>
+
+
+<view class="item">
+  <view class="top">
+    <image src="{{item.coverImgUrl}}" class="img" mode="widthFix"></image>
+    <view class="playCounts"><text>{{format.formatCounte(item.playCount)}}</text></view>
+  </view>
+  <view class="item-name">{{item.name}}</view>
+</view>

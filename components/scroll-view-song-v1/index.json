@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "area-header":"/components/area-header/index",
+    "scroll-view-song-v2":"/components/scroll-view-song-v2/index"
+  }
+}

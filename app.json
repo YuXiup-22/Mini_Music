@@ -1,0 +1,41 @@
+{
+  "pages": [
+    "pages/home_music/index",
+    "pages/video_music/inedx",
+    "components/video-item-v1/index",
+    "pages/video-detail/index",
+    "pages/search-box/index",
+    "pages/ranking_menu/index",
+    "pages/music-player/index",
+    "pages/profile/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fafafa",
+    "navigationBarTitleText": "Weixin",
+    "navigationBarTextStyle": "black"
+  },
+  "requiredBackgroundModes":["audio"],
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/home_music/index",
+        "text": "Music",
+        "iconPath": "assets/images/tabbar/music_normal.png",
+        "selectedIconPath": "assets/images/tabbar/music_active.png"
+      },
+      {
+        "pagePath": "pages/video_music/inedx",
+        "text": "MV",
+        "iconPath": "assets/images/tabbar/video_normal.png",
+        "selectedIconPath": "assets/images/tabbar/video_active.png"
+      },{
+        "pagePath": "pages/profile/index",
+        "text": "Profile",
+        "iconPath": "assets/images/tabbar/profile_normal.png",
+        "selectedIconPath": "assets/images/tabbar/profile_active.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

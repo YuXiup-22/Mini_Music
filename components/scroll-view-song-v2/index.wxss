@@ -1,0 +1,34 @@
+/* components/scroll-view-song-v2/index.wxss */
+.top{
+  position: relative;
+}
+.top .img{
+  width: 100%;
+}
+.top .playCounts{
+  position: absolute;
+  bottom: 14rpx;
+  right: 6rpx;
+  font-size: 24rpx;
+  color:rgb(185, 184, 184);
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 4rpx 8rpx;
+  border-radius: 12rpx;
+}
+.item-name{
+  width: 100%;
+  font-size: 26rpx;
+
+  /* 显示两行 */
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  display: -moz-box;
+  -moz-line-clamp: 2;
+  -moz-box-orient: vertical;
+  word-wrap: break-word;
+  word-break: break-all;
+  white-space: normal;
+  overflow: hidden;
+}

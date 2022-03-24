@@ -1,0 +1,13 @@
+<!--components/video-detail-v1/inedx.wxml-->
+<wxs src='../../utils/format.wxs' module="format"></wxs>
+<view class="mv-item">
+  <view class="mv-related">
+      <image class="img" src="{{relatedMV.coverUrl}}" mode="widthFix">
+        <view class="playcount">{{format.formatCounte(relatedMV.playTime)}}</view>
+      </image>
+    <view class="relatedInfo">
+      <view class="relatedTitle">{{relatedMV.title}}</view>
+      <view class="relatedName">{{relatedMV.creator[0].userName}}</view>
+    </view>
+  </view>
+</view>

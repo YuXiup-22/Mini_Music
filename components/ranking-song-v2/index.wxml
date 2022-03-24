@@ -1,0 +1,20 @@
+<!--components/ranking-song-v2/index.wxml-->
+<wxs src="../../utils/format.wxs" module="format"></wxs>
+
+<view class="ranking-item">
+  <view class="left">
+    <text class="title">{{item.name}}</text>
+    <block  wx:for="{{3}}"  wx:for-item="index" wx:key="*this">
+    <view class="name-list">
+      <text >{{index+1}} . {{item.songs[index].name}} </text>
+      <text class="singer">  - {{item.songs[index].ar[0].name}}</text>
+    </view>
+    </block>
+  </view>
+  <view class="right">
+    <image class="coverImg" src="{{item.coverimg}}" ></image>
+    <view class="playcount">
+        {{format.formatCounte(item.play)}}
+       </view>
+  </view>
+</view>

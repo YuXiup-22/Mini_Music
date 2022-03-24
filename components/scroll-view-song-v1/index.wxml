@@ -1,0 +1,12 @@
+<!--components/scroll-view-song-v1/index.wxml-->
+<area-header leftText="{{title}}"></area-header>
+<!-- 注意一定要说明从哪个方向滑动 -->
+<scroll-view class="hotSongList" scroll-x>
+  <block wx:for="{{songMenu}}" wx:key="id" >
+    <view class="song-item">
+      <scroll-view-song-v2 item="{{item}}" 
+                                      bindtap="songMenuClick"
+                                        data-item="{{item}}"></scroll-view-song-v2>
+    </view>
+  </block>
+</scroll-view>

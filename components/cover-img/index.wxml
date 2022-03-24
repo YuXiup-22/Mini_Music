@@ -1,0 +1,28 @@
+<!--components/cover-img/index.wxml-->
+<wxs src="/utils/format.wxs" module="format"> </wxs>
+<view class="header">
+  <!-- 背景 -->
+    <image class="bg-img" mode="aspectFill" src="{{rankingData.coverImgUrl}}"></image>
+    <view class="bg-cover"></view>
+    <view class="content">
+      <image class="img" src="{{rankingData.coverImgUrl}}"></image>
+      <view class="info">
+        <view class="title">{{rankingData.name}}</view>
+        <view class="anthor">
+          <image class="avater" src="{{rankingData.creator.avatarUrl}}"></image>
+          <view class="nickname">{{rankingData.creator.nickname}}</view>
+        </view>
+      <view class="desc">简介: {{rankingData.description}}</view>
+      </view>
+    </view>
+      <view class="operation">
+        <view class="favor item">
+        <image class="icon" mode="widthFix" src="/assets/images/icons/favor_icon.png"></image>
+        <text class="text">{{format.formatCounte(rankingData.playCount)}}</text>
+      </view>
+      <view class="share item">
+        <image class="icon" mode="widthFix" src="/assets/images/icons/share_icon.png"></image>
+        <text class="text">分享</text>
+      </view>
+      </view>
+  </view>

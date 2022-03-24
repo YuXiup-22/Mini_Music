@@ -1,0 +1,12 @@
+<!--components/ranking-list-item/index.wxml-->
+<view class="song-item" bindtap="ClickToPlayer" data-id="{{songinfo.id}}">
+  <view class="index">{{index}}</view>
+  <view class="info">
+    <view class="name">{{songinfo.name}}</view>
+    <view class="source">
+      <image class="icon" src="/assets/images/icons/sq_icon.png"></image>
+      <text class="artic">{{songinfo.ar[0].name || songinfo.artists[0].name}} </text>
+      <text class="space" wx:if="{{songinfo.alia[0]||songinfo.alias[0]}}">- {{songinfo.alia[0]||songinfo.alias[0]}}</text>
+    </view>
+  </view>
+</view>

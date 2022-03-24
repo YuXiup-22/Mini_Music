@@ -1,0 +1,9 @@
+<!--components/recommond-song/index.wxml-->
+<view class="rec-song-list" bindtap="ClickToplayer" data-id="{{item.id}}">
+  <image class="songpic" src="{{item.al.picUrl}}" mode="widthFix"></image>
+  <view class="content">
+    <view class="name">{{item.name}}</view>
+    <view class="artic">{{item.ar[0].name}} • {{item.al.name}} </view>
+  </view>
+  <image class="icon" src="/assets/images/icons/arrow-right.png" mode="widthFix"></image>
+</view>

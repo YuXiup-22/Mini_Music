@@ -1,0 +1,11 @@
+<!--components/SearchBox/searchbox.wxml-->
+<view search>
+  <view class="search-content">
+    <view class="search-field">
+      <image class="icon" src="../../assets/images/icons/search_icon.png"></image>
+      <input class="input" placeholder="{{placeholder}} " disabled="{{disabled}}"
+      style="background-color: {{ backgroundcolor}};"
+      ></input>
+    </view>
+  </view>
+</view>

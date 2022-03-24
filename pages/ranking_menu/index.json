@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "area-header":"/components/area-header/index",
+    "ranking-list-item":"/components/ranking-list-item/index",
+    "cover-img":"/components/cover-img/index"
+  }
+}

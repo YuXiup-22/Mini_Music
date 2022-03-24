@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "area-header":"/components/area-header/index",
+    "ranking-song-v2":"/components/ranking-song-v2/index"
+  }
+}

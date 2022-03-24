@@ -1,0 +1,6 @@
+<!--pages/video_music/inedx.wxml-->
+<view class="video">
+  <view class="item1" wx:for="{{topMVs}}" wx:key="id">
+    <video-item-v1 item ="{{item}}" bindtap="videoItemClick" data-item="{{item}}"></video-item-v1>
+  </view>
+</view>

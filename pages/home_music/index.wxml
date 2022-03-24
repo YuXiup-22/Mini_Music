@@ -1,0 +1,64 @@
+<!--pages/home_music/index.wxml-->
+<!-- 我的搜索框 -->
+<search-box backgroundcolor="#fafafa"
+placeholder="请输入搜索关键词"
+disabled = true
+bindtap="clickInput"></search-box>
+<!-- 搜索框 -->
+<!-- <van-search background='#fafafa'
+                    shape="round" 
+                    placeholder="请输入搜索关键词"
+                    disabled
+                      bind:click-input="clickInput"></van-search> -->
+<!-- 轮播图 -->
+<swiper class="swiper" 
+              indicator-dots
+              autoplay 
+              circular
+              style="height: {{swipperHeight}}px;">
+  <block  wx:for="{{banner}}" wx:key="bannerId">
+    <swiper-item class="swiper-item">
+      <image class="img" src="{{item.pic}}" mode="widthFix" bindload="getSwipperHeight"></image>
+    </swiper-item>
+  </block>
+</swiper>
+<!-- 推荐视频title -->
+<view class="recommond">
+  <area-header leftText="推荐歌曲" bindtap="clickHotRanking">
+  <!-- <view>hhhh</view> -->
+  </area-header>
+  <block class="rec-song" wx:for="{{recommand}}" wx:key="id">
+    <recommond-song item="{{item}}"
+                                      bindtap="musicList"
+                                      data-index = "{{index}}">
+    </recommond-song>
+  </block>
+</view>
+<!-- 热门歌单 和推荐歌单-->
+<scroll-view-song-v1 songMenu="{{hotSongMenu}}" title="热门歌单" ></scroll-view-song-v1>
+<scroll-view-song-v1 songMenu="{{hotSongMenu_CN}}" title="推荐歌单"></scroll-view-song-v1>
+<!-- 巅峰榜 -->
+<ranking-song-v1 rankingList="{{RankingSong}}" bind:clickRanking="clickMore"></ranking-song-v1>
+<!-- 播放工具栏 -->
+<view class="play-bar" 
+            wx:if="{{currentSong.name}}" 
+            bindtap="handleMusicBarClick">
+  <view class="left">
+    <image class="album album-anim" 
+                  mode="aspectFill"
+                  src="{{currentSong.al.picUrl}}"
+                  style="animation-play-state: {{animStates}};"></image>
+    <view class="name">{{currentSong.name}}</view>
+  </view>
+  <view class="right">
+    <image class="icon play"
+                   mode="aspectFill" 
+                   src="../../assets/images/music/{{isPlaying?'pause':'play'}}_icon.png"
+                   catchtap="handlePlay">
+    </image>
+    <image class="icon" mode="aspectFill" src="../../assets/images/music/playlist_icon.png"></image>
+  </view>
+</view>
+
+
+

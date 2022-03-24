@@ -1,0 +1,41 @@
+<!--pages/search-box/index.wxml-->
+<van-search background='#fafafa'
+                    value="{{value}}"
+                    shape="round" 
+                    placeholder="{{keywords[0].first}}"
+                    bind:change = "handleSearch"
+                    bind:search = "handleSearchAction"
+                    class="header"
+                    >
+</van-search>
+<!-- 热门搜索 -->
+<view class="hot" wx:if="{{!suggestsearch.length && !value.length}}">
+  <area-header leftText="热门搜索" showArrow="{{false}}"></area-header>
+  <view class="keywords">
+    <block wx:for="{{keywords}}" wx:key="first">
+      <view class="tag" bindtap="handleSearchActionRes" data-keyword="{{item.first}}">{{item.first}}</view>
+    </block>
+  </view>
+</view>
+<!-- 搜索建议 当建议搜索有值，且搜索结果为空时显示 -->
+<view class="search" wx:elif="{{!resultSongs.length && suggestsearch.length }}">
+  <view class="title">搜索"{{value}}"</view>
+  <view class="list">
+    <block wx:for="{{suggestres}}" wx:key="keyword">
+      <view class="item" bindtap="handleSearchActionRes" data-keyword="{{item.keyword}}">
+        <image class="icon" src="/assets/images/icons/search_icon.png" mode="widthFix"></image>
+        <view class="rich-text">
+          <rich-text nodes="{{suggestsearch[index]}}"></rich-text>
+        </view>
+      </view>
+    </block>
+  </view>
+</view>
+<!-- 搜索结果 -->
+<view class="result" wx:if="{{resultSongs.length}}">
+  <text class="title">最佳匹配</text>
+  <block wx:for="{{resultSongs}}" wx:key="{{item.id}}">
+    <ranking-list-item songinfo="{{item}}" index="{{index+1}}"></ranking-list-item>
+  </block>
+  
+</view>

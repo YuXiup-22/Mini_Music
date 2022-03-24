@@ -1,0 +1,21 @@
+<!--pages/profile/index.wxml-->
+<button open-type="getUserInfo" bindtap="getUserInfo">Test获取用户信息</button>
+<view search>
+  <view class="search-content">
+    <view class="search-field">
+      <image class="icon" src="../../assets/images/icons/search_icon.png"></image>
+      <input class="input" placeholder="请输入搜索关键字"></input>
+    </view>
+  </view>
+</view>
+
+
+
+<view class='page_row' bindtap="suo">  
+      <view class="search">  
+        <view class="df search_arr">  
+          <icon class="searchcion" size='20' type='search'></icon>  
+          <input class="" disabled placeholder="请输入关键字" value="{{searchValue}}"/>  
+        </view>  
+      </view>  
+    </view>  

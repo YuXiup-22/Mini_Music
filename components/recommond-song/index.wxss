@@ -1,0 +1,26 @@
+/* components/recommond-song/index.wxss */
+.rec-song-list{
+  display: flex;
+  align-items: center;
+  margin-top: 16rpx;
+}
+.content{
+  flex: 1;
+  margin-left:16rpx ;
+}
+.content .name{
+  font-size: 32rpx;
+  color: #555;
+}
+.content .artic{
+  font-size: 28rpx;
+  margin-top:16rpx ;
+  color: #777;
+}
+.songpic{
+  width:160rpx;
+  border-radius: 16rpx;
+}
+.icon{
+  width: 50rpx;
+}
